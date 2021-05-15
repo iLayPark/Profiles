@@ -26,6 +26,9 @@ show_menu() {
     ${green}1.${plain}  一键开启ssh秘钥登录
     ${green}2.${plain}  v2ray脚本
     ${green}3.${plain}  哪吒面板脚本
+    ${green}4.${plain}  LemonBench
+    ${green}5.${plain}  superSpeed
+    ${green}6.${plain}  流媒体解锁检测
     ————————————————-
     ${green}0.${plain}  退出脚本
     "
@@ -39,11 +42,20 @@ show_menu() {
         key
         ;;
     2)
-        v2ray
+        bash <(curl -s -L https://git.io/v2ray.sh)
         ;;
     3)
-        nezha
+        bash <(curl -s -L https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh)
         ;;
+    4)
+        curl -fsSL http://ilemonra.in/LemonBenchIntl | bash -s fast
+        ;;
+    5)
+        bash <(curl -Lso- https://git.io/superspeed)
+        ;;      
+    6)
+        bash <(curl -sSL "https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh")  
+        ;;        
     *)
         echo -e "${red}请输入正确的数字 [0-3]${plain}"
                 show_menu
