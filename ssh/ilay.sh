@@ -1,6 +1,13 @@
 #!/bin/bash
 key(){
 bash <(curl -fsSL git.io/key.sh) -og ilay1678 -p 8071 -d
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+sudo iptables -t nat -F        #清除NAT表
+sudo iptables -t mangle -F    #清除mangle表
+sudo iptables -F    #清除所有链的规则
+sudo iptables -X    #删除非默认链
 apt-get install ufw -y
 ufw allow 8071
 ufw allow https
