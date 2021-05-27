@@ -9,6 +9,11 @@ sudo apt-get update
 sudo apt-get install iptables-persistent -y
 sudo netfilter-persistent save
 sudo netfilter-persistent reload
+apt-get install ufw -y
+ufw allow 8071
+ufw allow https
+ufw allow http
+echo y | ufw enable
 }
 
 v2ray(){
@@ -33,6 +38,7 @@ show_menu() {
     ${green}4.${plain}  LemonBench
     ${green}5.${plain}  superSpeed
     ${green}6.${plain}  流媒体解锁检测
+    ${green}7.${plain}  superBench
     ————————————————-
     ${green}0.${plain}  退出脚本
     "
@@ -59,7 +65,10 @@ show_menu() {
         ;;      
     6)
         bash <(curl -sSL "https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh")  
-        ;;        
+        ;; 
+    7)
+        wget -qO- --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash  
+        ;;      
     *)
         echo -e "${red}请输入正确的数字 [0-3]${plain}"
                 show_menu
