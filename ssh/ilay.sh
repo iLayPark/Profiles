@@ -1,14 +1,6 @@
 #!/bin/bash
 key(){
 bash <(curl -fsSL git.io/key.sh) -og ilay1678 -p 8071 -d
-sudo iptables -I INPUT -s 0.0.0.0/0 -p tcp --dport 8071 -j ACCEPT
-sudo iptables -I INPUT -s 0.0.0.0/0 -p tcp --dport 80 -j ACCEPT
-sudo iptables -I INPUT -s 0.0.0.0/0 -p tcp --dport 443 -j ACCEPT
-sudo iptables-save
-sudo apt-get update
-sudo apt-get install iptables-persistent -y
-sudo netfilter-persistent save
-sudo netfilter-persistent reload
 apt-get install ufw -y
 ufw allow 8071
 ufw allow https
