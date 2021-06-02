@@ -31,10 +31,11 @@ show_menu() {
     ${green}5.${plain}  superSpeed
     ${green}6.${plain}  流媒体解锁检测
     ${green}7.${plain}  superBench
+    ${green}8.${plain}  安装docker
     ————————————————-
     ${green}0.${plain}  退出脚本
     "
-    echo && read -p "请输入选择 [0-13]: " num
+    echo && read -p "请输入选择 [0-8]: " num
 
     case "${num}" in
     0)
@@ -61,6 +62,9 @@ show_menu() {
     7)
         wget -qO- --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash  
         ;;      
+    8)
+        curl -fsSL https://get.docker.com | bash -s docker
+        ;;          
     *)
         echo -e "${red}请输入正确的数字 [0-3]${plain}"
                 show_menu
