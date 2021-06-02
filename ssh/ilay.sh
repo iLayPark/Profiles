@@ -8,13 +8,14 @@ ufw allow http
 echo y | ufw enable
 }
 
-v2ray(){
-bash <(curl -s -L https://git.io/v2ray.sh)
+bbr(){
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+sysctl net.ipv4.tcp_available_congestion_control
+lsmod | grep bbr
 }
 
-nezha(){
-bash <(curl -s -L https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh)
-}
 red='\033[0;31m'
 green='\033[0;32m'
 yellow='\033[0;33m'
@@ -32,10 +33,11 @@ show_menu() {
     ${green}6.${plain}  流媒体解锁检测
     ${green}7.${plain}  superBench
     ${green}8.${plain}  安装docker
+    ${green}9.${plain}  Debian开启bbr
     ————————————————-
     ${green}0.${plain}  退出脚本
     "
-    echo && read -p "请输入选择 [0-8]: " num
+    echo && read -p "请输入选择: " num
 
     case "${num}" in
     0)
@@ -64,7 +66,10 @@ show_menu() {
         ;;      
     8)
         curl -fsSL https://get.docker.com | bash -s docker
-        ;;          
+        ;;    
+    9)
+        bbr
+        ;;      
     *)
         echo -e "${red}请输入正确的数字 [0-3]${plain}"
                 show_menu
