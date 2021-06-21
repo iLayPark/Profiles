@@ -34,6 +34,7 @@ show_menu() {
     ${green}7.${plain}  superBench
     ${green}8.${plain}  安装docker
     ${green}9.${plain}  Debian开启bbr
+    ${green}10.${plain}  PortForward安装
     ————————————————-
     ${green}0.${plain}  退出脚本
     "
@@ -69,7 +70,10 @@ show_menu() {
         ;;    
     9)
         bbr
-        ;;      
+        ;;   
+    10)
+        bash <(curl -s -L https://github.961678.xyz/https://gist.githubusercontent.com/ilay1678/c994ed4b0598f7f3c685a6a395d8bbb5/raw/720f11dbb7dd1f155194cc36c83fc2383f5beac1/install.sh)
+        ;;   
     *)
         echo -e "${red}请输入正确的数字 [0-3]${plain}"
                 show_menu
