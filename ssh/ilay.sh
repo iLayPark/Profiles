@@ -72,7 +72,7 @@ show_menu() {
         bbr
         ;;   
     10)
-        bash <(curl -s -L https://github.961678.xyz/https://gist.githubusercontent.com/ilay1678/c994ed4b0598f7f3c685a6a395d8bbb5/raw/720f11dbb7dd1f155194cc36c83fc2383f5beac1/install.sh)
+        bash <(curl -s -L https://github.961678.xyz/https://gist.githubusercontent.com/ilay1678/c994ed4b0598f7f3c685a6a395d8bbb5/raw/install.sh)
         ;;   
     *)
         echo -e "${red}请输入正确的数字 [0-3]${plain}"
