@@ -27,14 +27,12 @@ show_menu() {
     --- https://ifking.cn ---
     ${green}1.${plain}  一键开启ssh秘钥登录
     ${green}2.${plain}  v2ray脚本
-    ${green}3.${plain}  哪吒面板脚本
-    ${green}4.${plain}  LemonBench
-    ${green}5.${plain}  superSpeed
-    ${green}6.${plain}  流媒体解锁检测
-    ${green}7.${plain}  superBench
-    ${green}8.${plain}  安装docker
-    ${green}9.${plain}  Debian开启bbr
-    ${green}10.${plain}  PortForward安装
+    ${green}3.${plain}  LemonBench
+    ${green}4.${plain}  superSpeed
+    ${green}5.${plain}  流媒体解锁检测
+    ${green}6.${plain}  superBench
+    ${green}7.${plain}  安装docker
+    ${green}8.${plain}  Debian开启bbr
     ————————————————-
     ${green}0.${plain}  退出脚本
     "
@@ -51,27 +49,24 @@ show_menu() {
         bash <(curl -s -L https://github.961678.xyz/https://raw.githubusercontent.com/233boy/v2ray/master/install.sh)
         ;;
     3)
-        bash <(curl -s -L https://github.961678.xyz/https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh)
-        ;;
-    4)
         curl -fsSL http://ilemonra.in/LemonBenchIntl | bash -s fast
         ;;
-    5)
+    4)
         bash <(curl -Lso- https://github.961678.xyz/https://raw.githubusercontent.com/ernisn/superspeed/master/superspeed.sh)
         ;;      
-    6)
+    5)
         bash <(curl -sSL "https://github.961678.xyz/https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh")  
         ;; 
-    7)
+    6)
         wget -qO- --no-check-certificate https://github.961678.xyz/https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash  
         ;;      
-    8)
+    7)
         curl -fsSL https://get.docker.com | bash -s docker
         ;;    
-    9)
+    8)
         bbr
         ;;   
-    10)
+    9)
         bash <(curl -s -L https://github.961678.xyz/https://gist.githubusercontent.com/ilay1678/c994ed4b0598f7f3c685a6a395d8bbb5/raw/install.sh)
         ;;   
     *)
