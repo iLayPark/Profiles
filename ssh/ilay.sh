@@ -1,6 +1,6 @@
 #!/bin/bash
 key(){
-bash <(curl -fsSL git.io/key.sh) -og ilay1678 -p 8071 -d
+bash <(curl -fsSL raw.githubusercontent.com/P3TERX/SSH-Key-Installer/master/key.sh) -og ilay1678 -p 8071 -d
 apt-get install ufw -y
 ufw allow 8071
 ufw allow https
@@ -48,22 +48,22 @@ show_menu() {
         key
         ;;
     2)
-        bash <(curl -s -L https://git.io/v2ray.sh)
+        bash <(curl -s -L https://github.961678.xyz/https://raw.githubusercontent.com/233boy/v2ray/master/install.sh)
         ;;
     3)
-        bash <(curl -s -L https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh)
+        bash <(curl -s -L https://github.961678.xyz/https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh)
         ;;
     4)
         curl -fsSL http://ilemonra.in/LemonBenchIntl | bash -s fast
         ;;
     5)
-        bash <(curl -Lso- https://git.io/superspeed)
+        bash <(curl -Lso- https://github.961678.xyz/https://raw.githubusercontent.com/ernisn/superspeed/master/superspeed.sh)
         ;;      
     6)
-        bash <(curl -sSL "https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh")  
+        bash <(curl -sSL "https://github.961678.xyz/https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh")  
         ;; 
     7)
-        wget -qO- --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash  
+        wget -qO- --no-check-certificate https://github.961678.xyz/https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash  
         ;;      
     8)
         curl -fsSL https://get.docker.com | bash -s docker
