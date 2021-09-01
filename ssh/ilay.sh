@@ -52,7 +52,7 @@ show_menu() {
         curl -fsSL http://ilemonra.in/LemonBenchIntl | bash -s fast
         ;;
     4)
-        bash <(curl -Lso- https://github.961678.xyz/https://raw.githubusercontent.com/ernisn/superspeed/master/superspeed.sh)
+        bash <(curl -Lso- https://github.961678.xyz/https://github.com/CoiaPrant/Speedtest/raw/main/speedtest-multi.sh)
         ;;      
     5)
         bash <(curl -sSL "https://github.961678.xyz/https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh")  
