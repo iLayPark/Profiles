@@ -56,7 +56,7 @@ for i in {0..8}; do
 		if [ $? == 0 ];then
 			echo -e "目标:${iplocal[i]}[${iplise[i]}]\t回程线路:\033[1;34m电信163\033[0m(AS4134)"
 		else
-			grep -q "219.158"  /root/traceroute_testlog
+			grep -q "218.105"  /root/traceroute_testlog
 			if [ $? == 0 ];then
 				echo -e "目标:${iplocal[i]}[${iplise[i]}]\t回程线路:\033[1;33m联通169\033[0m(AS4837)"
 			else
@@ -68,7 +68,7 @@ for i in {0..8}; do
 					if [ $? == 0 ];then
 						echo -e "目标:${iplocal[i]}[${iplise[i]}]\t回程线路:\033[1;35m移动cmi\033[0m(AS9808)"
 					else
-						grep -q "218.105"  /root/traceroute_testlog
+						grep -q "219.158"  /root/traceroute_testlog
 						if [ $? == 0 ];then
 							echo -e "目标:${iplocal[i]}[${iplise[i]}]\t回程线路:\033[1;33m联通A网\033[0m(AS9929)"
 						else
