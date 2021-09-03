@@ -54,7 +54,7 @@ fi
 echo -e "\n该小工具可以为你检查本服务器到中国北京、上海、广州的[回程网络]类型\n"
 iplise=(219.141.136.10 202.106.196.115 211.136.28.231 202.96.199.132 211.95.72.1 211.136.112.50 61.144.56.100 211.95.193.97 120.196.122.69)
 iplocal=(北京电信 北京联通 北京移动 上海电信 上海联通 上海移动 广州电信 广州联通 广州移动)
-echo -e "\033[0m\033[1;32m[Info] 开始测试，请稍后...\033[0m";sleep 2s
+echo -e "\033[0m\033[1;32m[Info] 开始测试，请稍后...\033[0m";
 echo -e "——————————————————————————————\n"
 for i in {0..8}; do
 	trace ${iplise[i]} ${iplocal[i]}
@@ -64,14 +64,14 @@ done
 
 cat /etc/issue | grep -q "Ubuntu"
 if [[ $? == 0 ]];then
-    #echo -e "\n\033[1;32m[Info] Ubuntu Update\033[0m";sleep 2s
+    #echo -e "\n\033[1;32m[Info] Ubuntu Update\033[0m";
     #sudo apt update
     sudo apt install traceroute
 fi
 
 cat /etc/issue | grep -q "Debian"
 if [[ $? == 0 ]];then
-    #echo -e "\n\033[1;32m[Info] Debian Update\033[0m";sleep 2s
+    #echo -e "\n\033[1;32m[Info] Debian Update\033[0m";
     #sudo apt update
     sudo apt install traceroute
 fi
@@ -80,7 +80,7 @@ cat /etc/issue | grep -q "Kernel"
 if [[ $? == 0 ]];then
     whereis traceroute | grep -q bin
     if [[ $? != 0 ]];then
-        echo -e "\n\033[1;32m[Info] CentOS Install traceroute\033[0m";sleep 2s
+        echo -e "\n\033[1;32m[Info] CentOS Install traceroute\033[0m";
         yum install traceroute -y
     fi
 fi
