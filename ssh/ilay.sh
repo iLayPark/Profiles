@@ -52,10 +52,10 @@ show_menu() {
         curl -fsSL http://ilemonra.in/LemonBenchIntl | bash -s fast
         ;;
     4)
-        bash <(curl -Lso- https://github.961678.xyz/https://github.com/CoiaPrant/Speedtest/raw/main/speedtest-multi.sh)
+        bash <(curl -Lso- https://cdn.jsdelivr.net/gh/CoiaPrant/Speedtest@main/speedtest-multi.sh)
         ;;      
     5)
-        bash <(curl -sSL "https://github.961678.xyz/https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh")  
+        bash <(curl -sSL https://cdn.jsdelivr.net/gh/CoiaPrant/MediaUnlock_Test@main/check.sh)  
         ;; 
     6)
         wget -qO- --no-check-certificate https://github.961678.xyz/https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash  
