@@ -61,28 +61,29 @@ for i in {0..8}; do
 echo 
 done
 }
+if ! type traceroute >/dev/null 2>&1; then
+	cat /etc/issue | grep -q "Ubuntu"
+	if [[ $? == 0 ]];then
+	    echo -e "\n\033[1;32m[Info] Ubuntu Update\033[0m";
+	    sudo apt update
+	    sudo apt install traceroute
+	fi
 
-cat /etc/issue | grep -q "Ubuntu"
-if [[ $? == 0 ]];then
-    #echo -e "\n\033[1;32m[Info] Ubuntu Update\033[0m";
-    #sudo apt update
-    sudo apt install traceroute
-fi
+	cat /etc/issue | grep -q "Debian"
+	if [[ $? == 0 ]];then
+	    echo -e "\n\033[1;32m[Info] Debian Update\033[0m";
+	    sudo apt update
+	    sudo apt install traceroute
+	fi
 
-cat /etc/issue | grep -q "Debian"
-if [[ $? == 0 ]];then
-    #echo -e "\n\033[1;32m[Info] Debian Update\033[0m";
-    #sudo apt update
-    sudo apt install traceroute
-fi
-
-cat /etc/issue | grep -q "Kernel"
-if [[ $? == 0 ]];then
-    whereis traceroute | grep -q bin
-    if [[ $? != 0 ]];then
-        echo -e "\n\033[1;32m[Info] CentOS Install traceroute\033[0m";
-        yum install traceroute -y
-    fi
+	cat /etc/issue | grep -q "Kernel"
+	if [[ $? == 0 ]];then
+	    whereis traceroute | grep -q bin
+	    if [[ $? != 0 ]];then
+		echo -e "\n\033[1;32m[Info] CentOS Install traceroute\033[0m";
+		yum install traceroute -y
+	    fi
+	fi
 fi
 
 
