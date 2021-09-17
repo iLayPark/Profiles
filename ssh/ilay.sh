@@ -44,30 +44,39 @@ show_menu() {
         ;;
     1)
         key
+        show_menu
         ;;
     2)
         bash <(curl -s -L https://github.961678.xyz/https://raw.githubusercontent.com/233boy/v2ray/master/install.sh)
+        show_menu
         ;;
     3)
-        curl -fsSL http://ilemonra.in/LemonBenchIntl | bash -s fast
+        curl -fsSL http://ilemonra.in/LemonBenchIntl | bash -s full
+        show_menu
         ;;
     4)
         bash <(curl -Lso- https://cdn.jsdelivr.net/gh/CoiaPrant/Speedtest@main/speedtest-multi.sh)
+        show_menu
         ;;      
     5)
         bash <(curl -sSL https://cdn.jsdelivr.net/gh/CoiaPrant/MediaUnlock_Test@main/check.sh)  
+        show_menu
         ;; 
     6)
         wget -qO- --no-check-certificate https://github.961678.xyz/https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash  
+        show_menu
         ;;      
     7)
         curl -fsSL https://get.docker.com | bash -s docker
+        show_menu
         ;;    
     8)
         bbr
+        show_menu
         ;;   
     9)
         bash <(curl -s -L https://github.961678.xyz/https://gist.githubusercontent.com/ilay1678/c994ed4b0598f7f3c685a6a395d8bbb5/raw/install.sh)
+        show_menu
         ;;   
     *)
         echo -e "${red}请输入正确的数字 [0-3]${plain}"
