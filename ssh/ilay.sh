@@ -1,6 +1,6 @@
 #!/bin/bash
 key(){
-bash <(curl -fsSL raw.githubusercontent.com/P3TERX/SSH-Key-Installer/master/key.sh) -og ilay1678 -p 8071 -d
+bash <(curl -fsSL cdn.jsdelivr.net/gh/P3TERX/SSH_Key_Installer@master/key.sh) -og ilay1678 -p 8071 -d
 apt-get install ufw -y
 ufw allow 8071
 ufw allow https
