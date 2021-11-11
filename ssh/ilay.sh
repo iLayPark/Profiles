@@ -15,6 +15,13 @@ sysctl -p
 sysctl net.ipv4.tcp_available_congestion_control
 lsmod | grep bbr
 }
+caddy(){
+apt install -y debian-keyring debian-archive-keyring apt-transport-https
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | tee /etc/apt/trusted.gpg.d/caddy-stable.asc
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | tee /etc/apt/sources.list.d/caddy-stable.list
+apt update
+apt install caddy
+}
 
 red='\033[0;31m'
 green='\033[0;32m'
@@ -33,6 +40,7 @@ show_menu() {
     ${green}6.${plain}  superBench
     ${green}7.${plain}  安装docker
     ${green}8.${plain}  Debian开启bbr
+    ${green}9.${plain}  安装Caddy
     ————————————————-
     ${green}0.${plain}  退出脚本
     "
@@ -75,7 +83,7 @@ show_menu() {
         show_menu
         ;;   
     9)
-        bash <(curl -s -L https://github.961678.xyz/https://gist.githubusercontent.com/ilay1678/c994ed4b0598f7f3c685a6a395d8bbb5/raw/install.sh)
+        caddy
         show_menu
         ;;   
     *)
