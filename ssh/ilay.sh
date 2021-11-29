@@ -41,6 +41,7 @@ show_menu() {
     ${green}7.${plain}  安装docker
     ${green}8.${plain}  Debian开启bbr
     ${green}9.${plain}  安装Caddy
+    ${green}10.${plain}  yabs
     ————————————————-
     ${green}0.${plain}  退出脚本
     "
@@ -85,7 +86,11 @@ show_menu() {
     9)
         caddy
         show_menu
-        ;;   
+        ;; 
+    10)
+        curl -sL yabs.sh | bash
+        show_menu
+        ;;       
     *)
         echo -e "${red}请输入正确的数字 [0-3]${plain}"
                 show_menu
