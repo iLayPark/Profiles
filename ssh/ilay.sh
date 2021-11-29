@@ -72,7 +72,7 @@ show_menu() {
         show_menu
         ;; 
     6)
-        wget -qO- --no-check-certificate https://github.961678.xyz/https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash  
+        bash <(wget -qO- https://down.vpsaff.net/linux/speedtest/superbench.sh)
         show_menu
         ;;      
     7)
