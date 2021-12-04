@@ -64,7 +64,7 @@ show_menu() {
         show_menu
         ;;
     4)
-        bash <(curl -Lso- https://cdn.jsdelivr.net/gh/CoiaPrant/Speedtest@main/speedtest-multi.sh)
+        bash <(curl -Lso- https://cdn.jsdelivr.net/gh/CoiaPrant/Speedtest@main/speedtest-single.sh)
         show_menu
         ;;      
     5)
