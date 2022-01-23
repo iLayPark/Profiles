@@ -72,7 +72,7 @@ show_menu() {
         show_menu
         ;; 
     6)
-        bash <(wget -qO- https://down.vpsxb.net/superbench.sh)
+        bash <(wget -qO- https://down.vpsaff.net/linux/speedtest/superbench.sh)
         show_menu
         ;;      
     7)
