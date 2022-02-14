@@ -53,43 +53,33 @@ show_menu() {
         ;;
     1)
         key
-        show_menu
         ;;
     2)
         bash <(curl -s -L https://github.961678.xyz/https://raw.githubusercontent.com/233boy/v2ray/master/install.sh)
-        show_menu
         ;;
     3)
         curl -fsSL http://ilemonra.in/LemonBenchIntl | bash -s full
-        show_menu
         ;;
     4)
         bash <(curl -Lso- https://cdn.jsdelivr.net/gh/CoiaPrant/Speedtest@main/speedtest-multi.sh)
-        show_menu
         ;;      
     5)
         bash <(curl -sSL https://cdn.jsdelivr.net/gh/CoiaPrant/MediaUnlock_Test@main/check.sh)  
-        show_menu
         ;; 
     6)
         bash <(wget -qO- https://down.vpsaff.net/linux/speedtest/superbench.sh)
-        show_menu
         ;;      
     7)
         curl -fsSL https://get.docker.com | bash -s docker
-        show_menu
         ;;    
     8)
         bbr
-        show_menu
         ;;   
     9)
         caddy
-        show_menu
         ;; 
     10)
         curl -sL yabs.sh | bash
-        show_menu
         ;;       
     *)
         echo -e "${red}请输入正确的数字 [0-3]${plain}"
