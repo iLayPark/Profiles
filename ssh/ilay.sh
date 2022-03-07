@@ -42,6 +42,7 @@ show_menu() {
     ${green}8.${plain}  Debian开启bbr
     ${green}9.${plain}  安装Caddy
     ${green}10.${plain}  yabs
+    ${green}11.${plain}  安装docker-compose
     ————————————————-
     ${green}0.${plain}  退出脚本
     "
@@ -80,7 +81,13 @@ show_menu() {
         ;; 
     10)
         curl -sL yabs.sh | bash
-        ;;       
+        ;;  
+    11)
+        DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+        mkdir -p $DOCKER_CONFIG/cli-plugins
+        curl -SL https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+        chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+        ;;  
     *)
         echo -e "${red}请输入正确的数字 [0-3]${plain}"
                 show_menu
