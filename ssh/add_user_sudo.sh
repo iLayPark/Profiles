@@ -13,7 +13,7 @@ else
     echo -e "\033[31m用户${name}:创建失败\033[0m"
     exit 1
 fi
-echo $pass | passwd $name --stdin  &>/dev/null
+echo "${name}:${pass}" | chpasswd
 if [ $? -eq 0 ];then
     echo -e "\033[32m用户${name}:密码设置成功!!!"
 else
