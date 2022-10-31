@@ -6,7 +6,7 @@ pass=$2
 #echo "you are setting username : ${name}"
 #echo "you are setting password : $pass for ${name}"
 #调用name变量创建用户
-useradd -s /bin/bash $name
+useradd -m -s /bin/bash $name
 if [ $? -eq 0 ];then
     echo -e "\033[32m用户${name}:创建成功\033[0m"
 else
