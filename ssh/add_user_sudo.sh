@@ -22,7 +22,7 @@ fi
 
 #追加用户至sudoers设置sudo免密调用
 usermod -aG sudo $name
-tee /etc/sudoers.d/$name <<< "${name} ALL=(ALL) NOPASSWD: ALL) ALL"
+tee /etc/sudoers.d/$name <<< "${name} ALL=(ALL) NOPASSWD: ALL"
 chmod 440 /etc/sudoers.d/$name
 # sed -i '/^root.*ALL=(ALL).*ALL/a\'$name'\tALL=(ALL) \tNOPASSWD:ALL' /etc/sudoers
 names=`cat /etc/sudoers.d/$name | grep -w $name| wc -l`
