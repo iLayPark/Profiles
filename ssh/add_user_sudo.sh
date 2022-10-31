@@ -21,8 +21,11 @@ else
 fi
 
 #追加用户至sudoers设置sudo免密调用
-sed -i '/^root.*ALL=(ALL).*ALL/a\'$name'\tALL=(ALL) \tNOPASSWD:ALL' /etc/sudoers
-names=`cat /etc/sudoers | grep -w $name| wc -l`
+usermod -aG sudo $name
+tee /etc/sudoers.d/$name <<< "${name} ALL=(ALL) NOPASSWD: ALL) ALL"
+chmod 440 /etc/sudoers.d/$name
+# sed -i '/^root.*ALL=(ALL).*ALL/a\'$name'\tALL=(ALL) \tNOPASSWD:ALL' /etc/sudoers
+names=`cat /etc/sudoers.d/$name | grep -w $name| wc -l`
 if [ $names -eq 0 ];then
     echo -e "\033[31m用户$name:sudoers修改失败，请检验\033[0m"
 else
