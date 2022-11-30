@@ -35,7 +35,7 @@ show_menu() {
     ${green}1.${plain}  一键开启ssh秘钥登录
     ${green}2.${plain}  v2ray脚本
     ${green}3.${plain}  LemonBench
-    ${green}4.${plain}  superSpeed
+    ${green}4.${plain}  安装node-exporter
     ${green}5.${plain}  流媒体解锁检测
     ${green}6.${plain}  superBench
     ${green}7.${plain}  安装docker
@@ -56,13 +56,13 @@ show_menu() {
         key
         ;;
     2)
-        bash <(curl -s -L https://github.961678.xyz/https://raw.githubusercontent.com/233boy/v2ray/master/install.sh)
+        bash <(curl -s -L https://ghproxy.com/https://raw.githubusercontent.com/233boy/v2ray/master/install.sh)
         ;;
     3)
         curl -fsSL http://ilemonra.in/LemonBenchIntl | bash -s full
         ;;
     4)
-        bash <(curl -Lso- https://cdn.jsdelivr.net/gh/CoiaPrant/Speedtest@main/speedtest-multi.sh)
+        bash <(curl -Lso- https://ghproxy.com/https://raw.githubusercontent.com/ilay1678/Profiles/master/ssh/node_exporter.sh)
         ;;      
     5)
         bash <(curl -sSL https://cdn.jsdelivr.net/gh/CoiaPrant/MediaUnlock_Test@main/check.sh)  
