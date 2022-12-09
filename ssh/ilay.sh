@@ -65,7 +65,7 @@ show_menu() {
         bash <(curl -Lso- https://ghproxy.com/https://raw.githubusercontent.com/ilay1678/Profiles/master/ssh/node_exporter.sh)
         ;;      
     5)
-        bash <(curl -sSL https://cdn.jsdelivr.net/gh/CoiaPrant/MediaUnlock_Test@main/check.sh)  
+        bash <(curl -Ls unlock.moe) 
         ;; 
     6)
         bash <(wget -qO- https://down.vpsaff.net/linux/speedtest/superbench.sh)
