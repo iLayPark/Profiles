@@ -38,13 +38,9 @@
       "default_interface_address": [],
       "wifi_ssid": [],
       "wifi_bssid": [],
-      "invert": false
-    },
-    {
-      "type": "logical",
-      "mode": "and",
-      "rules": [],
-      "invert": false
-    }
-  ]
+      "invert": false,
+       "conditions": "or"
+    }     
+  ],
+  "version": 2
 }
