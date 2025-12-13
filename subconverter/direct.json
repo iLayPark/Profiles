@@ -1,0 +1,77 @@
+下面是将你给出的规则 **按照你提供的 JSON 模板结构** 转换后的结果。
+（你的规则中只有 **IP-CIDR** 与 **DOMAIN-SUFFIX**，模板里的其他字段保持空或默认。）
+
+```json
+{
+  "rules": [
+    {
+      "query_type": [],
+      "network": [],
+      "domain": [],
+      "domain_suffix": [
+        "app.ilay.top",
+        "mi.com",
+        "gcorelabs.com",
+        "spartanhost.net",
+        "akkocloud.com",
+        "961678.xyz",
+        "ilay.top",
+        "zeroteam.top",
+        "tabbycloud.com",
+        "kurun.com",
+        "hostyun.com",
+        "virmach.com",
+        "idc.wiki",
+        "sa.net",
+        "greencloudvps.com",
+        "gov.cn",
+        "rcp.net",
+        "a400.net",
+        "wxstore.org",
+        "umeng.com",
+        "micu.hk",
+        "as174.de",
+        "saodu.work"
+      ],
+      "domain_keyword": [],
+      "domain_regex": [],
+      "source_ip_cidr": [],
+      "ip_cidr": [
+        "192.168.6.0/24",
+        "100.64.0.0/24",
+        "172.28.0.0/12",
+        "192.168.6.0/24",
+        "10.10.0.0/16",
+        "10.0.0.0/16",
+        "10.200.0.0/16",
+        "103.254.76.0/24",
+        "150.138.145.0/24"
+      ],
+      "source_port": [],
+      "source_port_range": [],
+      "port": [],
+      "port_range": [],
+      "process_name": [],
+      "process_path": [],
+      "process_path_regex": [],
+      "package_name": [],
+      "network_type": [],
+      "network_is_expensive": false,
+      "network_is_constrained": false,
+      "network_interface_address": {},
+      "default_interface_address": [],
+      "wifi_ssid": [],
+      "wifi_bssid": [],
+      "invert": false
+    },
+    {
+      "type": "logical",
+      "mode": "and",
+      "rules": [],
+      "invert": false
+    }
+  ]
+}
+```
+
+如需将每条规则分别拆成多个规则对象、或加入动作（如 DIRECT / no-resolve），我可以继续为你调整。
