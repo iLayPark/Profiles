@@ -65,7 +65,8 @@
       "mode": "and",
       "rules": [],
       "invert": false
-    }
+    },
+     "conditions": "or"
   ],
   "version": 2
 }
